@@ -20,13 +20,15 @@
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
 
-    /* Aliases */
+		/* Aliases */
 		"paths": {
 			"@components/*": ["./src/components/*"],
 			"@views/*": ["./src/views/*"],
 			"@styles/*": ["./src/styles/*"],
 			"@assets/*": ["./src/assets/*"],
 			"@app/*": ["./src/app/*"],
+			"@api/*": ["./src/api/*"],
+			"@interfaces/*": ["./src/interfaces/*"],
 			"@features/*": ["./src/features/*"],
 			"@helpers/*": ["./src/helpers/*"],
 			"@mocks/*": ["./src/mocks/*"]
