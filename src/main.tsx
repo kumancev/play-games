@@ -6,17 +6,17 @@ import GameDetail from '@views/GameDetail/GameDetail'
 import './index.css'
 
 const router = createBrowserRouter([
-	{
-		path: '/',
-		element: <App />,
-		errorElement: <NotFound />,
-	},
-	{
-		path: 'game/:gameId',
-		element: <GameDetail />,
-	},
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <NotFound />,
+  },
+  {
+    path: 'game/:gameId',
+    element: <GameDetail />,
+  },
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-	<RouterProvider router={router} />
+  <RouterProvider router={router} />
 )
