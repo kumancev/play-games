@@ -1,12 +1,7 @@
-import Home from '@views/Home/Home'
-import './App.css'
+import LayoutApp from '@components/Layout/Layout'
 
 const App = () => {
-  return (
-    <>
-      <Home />
-    </>
-  )
+  return <LayoutApp />
 }
 
 export default App

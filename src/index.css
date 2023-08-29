@@ -8,9 +8,35 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
 }
 
 a {
   color: inherit;
   text-decoration: inherit;
+}
+
+.logo-wrapper {
+  max-width: 150px;
+  max-height: 150px;
+  content: url('./assets/logo.png');
+}
+
+.text-title {
+  font-size: 1.5rem;
+}
+
+.text-blue {
+  color: #49acff !important;
 }

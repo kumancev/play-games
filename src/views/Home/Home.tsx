@@ -1,7 +1,8 @@
-import request from '@api/index'
-import GameCard from '@components/GameCard'
-import { GameItem } from '@interfaces/game'
 import { useEffect, useState } from 'react'
+import request from '@api/index'
+import GameCard from '@components/GameCard/GameCard'
+import { GameItem } from '@interfaces/game'
+import './index.css'
 
 const Home = () => {
   const [data, setData] = useState<Array<GameItem> | null>(null)
@@ -23,10 +24,9 @@ const Home = () => {
   }, [])
 
   return (
-    <>
-      <div>Home</div>
+    <div className='game-list-wrapper'>
       {data?.map((game) => <GameCard key={game.id} {...game} />)}
-    </>
+    </div>
   )
 }
 
