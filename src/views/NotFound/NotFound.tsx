@@ -1,4 +1,5 @@
 import { useRouteError } from 'react-router-dom'
+import './index.css'
 
 const NotFound = () => {
   const error = useRouteError()
