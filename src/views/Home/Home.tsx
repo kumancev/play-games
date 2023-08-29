@@ -1,11 +1,7 @@
 import request from '@api/index'
-import { formatDate } from '@helpers/formatDate'
+import GameCard from '@components/GameCard'
 import { GameItem } from '@interfaces/game'
-import { Card } from 'antd'
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-
-const { Meta } = Card
 
 const Home = () => {
   const [data, setData] = useState<Array<GameItem> | null>(null)
@@ -29,22 +25,7 @@ const Home = () => {
   return (
     <>
       <div>Home</div>
-      {data?.map((game) => (
-        <Link key={game.id} to={`game/${game.id}`}>
-          <Card
-            hoverable
-            style={{ width: 240 }}
-            cover={<img alt={game.title} src={game.thumbnail} />}
-          >
-            <Meta
-              title={game.title}
-              description={formatDate(game.release_date)}
-            />
-            <p>{game.publisher}</p>
-            <p>{game.genre}</p>
-          </Card>
-        </Link>
-      ))}
+      {data?.map((game) => <GameCard key={game.id} {...game} />)}
     </>
   )
 }
