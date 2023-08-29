@@ -1,7 +1,7 @@
 import Home from '@views/Home/Home'
 import './App.css'
 
-function App() {
+const App = () => {
   return (
     <>
       <Home />

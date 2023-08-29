@@ -9,17 +9,17 @@ const GameCard = (game: GameItem) => {
   const { id, title, thumbnail, publisher, genre, release_date } = game
 
   return (
-    <Link to={`game/${id}`}>
-      <Card
-        hoverable
-        style={{ width: 240 }}
-        cover={<img alt={title} src={thumbnail} />}
-      >
+    <Card
+      hoverable
+      style={{ width: 240 }}
+      cover={<img alt={title} src={thumbnail} />}
+    >
+      <Link to={`game/${id}`}>
         <Meta title={title} description={formatDate(release_date)} />
         <p>{publisher}</p>
         <p>{genre}</p>
-      </Card>
-    </Link>
+      </Link>
+    </Card>
   )
 }
 
