@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import request from '@api/index'
+import SelectPanel from '@components/Select/SelectPanel'
 import GameCard from '@components/GameCard/GameCard'
 import { GameItem } from '@interfaces/game'
 import './index.css'
@@ -12,7 +13,7 @@ const Home = () => {
       try {
         const response = await request<Array<GameItem>>(
           'GET',
-          'games?category=shooter'
+          'category=shooter'
         )
         setData(response.data)
       } catch (error) {
@@ -24,9 +25,12 @@ const Home = () => {
   }, [])
 
   return (
-    <div className='game-list-wrapper'>
-      {data?.map((game) => <GameCard key={game.id} {...game} />)}
-    </div>
+    <>
+      <SelectPanel />
+      <section className='game-list-wrapper'>
+        {data?.map((game) => <GameCard key={game.id} {...game} />)}
+      </section>
+    </>
   )
 }
 

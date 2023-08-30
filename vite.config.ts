@@ -19,6 +19,7 @@ export default defineConfig({
       '@interfaces': path.resolve(__dirname, './src/interfaces'),
       '@features': path.resolve(__dirname, './src/features'),
       '@helpers': path.resolve(__dirname, './src/helpers'),
+      '@utils': path.resolve(__dirname, './src/utils'),
     },
   },
 })

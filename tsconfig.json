@@ -31,7 +31,7 @@
       "@interfaces/*": ["./src/interfaces/*"],
       "@features/*": ["./src/features/*"],
       "@helpers/*": ["./src/helpers/*"],
-      "@mocks/*": ["./src/mocks/*"]
+      "@utils/*": ["./src/utils/*"],
     }
   },
   "include": ["src"],
