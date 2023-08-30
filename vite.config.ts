@@ -12,11 +12,11 @@ export default defineConfig({
     alias: {
       '@styles': path.resolve(__dirname, './src/styles'),
       '@components': path.resolve(__dirname, './src/components'),
-      '@views': path.resolve(__dirname, './src/views'),
+      '@routes': path.resolve(__dirname, './src/routes'),
       '@assets': path.resolve(__dirname, './src/assets'),
       '@app': path.resolve(__dirname, './src/app'),
       '@api': path.resolve(__dirname, './src/api'),
-      '@interfaces': path.resolve(__dirname, './src/interfaces'),
+      '@types': path.resolve(__dirname, './src/types'),
       '@features': path.resolve(__dirname, './src/features'),
       '@helpers': path.resolve(__dirname, './src/helpers'),
       '@utils': path.resolve(__dirname, './src/utils'),

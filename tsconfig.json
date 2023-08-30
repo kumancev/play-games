@@ -23,15 +23,15 @@
     /* Aliases */
     "paths": {
       "@components/*": ["./src/components/*"],
-      "@views/*": ["./src/views/*"],
+      "@routes/*": ["./src/routes/*"],
       "@styles/*": ["./src/styles/*"],
       "@assets/*": ["./src/assets/*"],
       "@app/*": ["./src/app/*"],
       "@api/*": ["./src/api/*"],
-      "@interfaces/*": ["./src/interfaces/*"],
+      "@src/types/*": ["./src/types/*"],
       "@features/*": ["./src/features/*"],
       "@helpers/*": ["./src/helpers/*"],
-      "@utils/*": ["./src/utils/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   },
   "include": ["src"],

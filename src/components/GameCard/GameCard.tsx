@@ -1,5 +1,5 @@
 import { formatDate } from '@helpers/formatDate'
-import { GameItem } from '@interfaces/game'
+import { GameItem } from '@src/types/game'
 import { Card } from 'antd'
 import { Link } from 'react-router-dom'
 

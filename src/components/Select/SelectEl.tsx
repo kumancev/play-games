@@ -1,5 +1,5 @@
 import { Select } from 'antd'
-import { SelectElProps } from '@interfaces/select'
+import { SelectElProps } from '@src/types/select'
 
 const SelectEl = ({ options, defaultValue }: SelectElProps) => {
   const handleChange = (value: { value: string; label: React.ReactNode }) => {

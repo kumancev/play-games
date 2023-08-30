@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import request from '@api/index'
 import SelectPanel from '@components/Select/SelectPanel'
 import GameCard from '@components/GameCard/GameCard'
-import { GameItem } from '@interfaces/game'
+import { GameItem } from '@interfaces/game.type'
 import './index.css'
 
 const Home = () => {
