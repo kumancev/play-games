@@ -4,6 +4,7 @@ import SelectPanel from '@components/Select/SelectPanel'
 import GameCard from '@components/GameCard/GameCard'
 import { GameItem } from '@src/types/game'
 import './index.css'
+import Loader from '@components/Loader/Loader'
 
 const Home = () => {
   const [data, setData] = useState<Array<GameItem> | null>(null)
@@ -33,7 +34,7 @@ const Home = () => {
         {data ? (
           data.map((game) => <GameCard key={game.id} {...game} />)
         ) : (
-          <p>Loading ...</p>
+          <Loader />
         )}
       </section>
     </div>
