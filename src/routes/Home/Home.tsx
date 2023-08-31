@@ -1,28 +1,21 @@
-import { useEffect, useState } from 'react'
-import request from '@api/index'
 import SelectPanel from '@components/Select/SelectPanel'
 import GameCard from '@components/GameCard/GameCard'
-import { GameItem } from '@src/types/game'
-import './index.css'
 import Loader from '@components/Loader/Loader'
+import { useGetSortGamesQuery } from '@services/games'
+import { useAppSelector } from '@app/hooks'
+import './index.css'
 
 const Home = () => {
-  const [data, setData] = useState<Array<GameItem> | null>(null)
-
-  useEffect(() => {
-    const fecthData = async () => {
-      try {
-        const response = await request<Array<GameItem>>('GET', 'games', {
-          category: 'shooter',
-        })
-        setData(response.data)
-      } catch (error) {
-        console.error('Error fetching data:', error)
-      }
+  const { data, error, isLoading } = useGetSortGamesQuery(
+    {
+      platform: useAppSelector((state) => state.filters.platform),
+      genre: useAppSelector((state) => state.filters.genre),
+      sort: useAppSelector((state) => state.filters.sort),
+    },
+    {
+      refetchOnMountOrArgChange: true,
     }
-
-    fecthData()
-  }, [])
+  )
 
   return (
     <div className='game-list'>
@@ -31,11 +24,13 @@ const Home = () => {
       </h1>
       <SelectPanel />
       <section className='game-list__wrapper'>
-        {data ? (
-          data.map((game) => <GameCard key={game.id} {...game} />)
-        ) : (
-          <Loader />
+        {isLoading && <Loader />}
+        {error && (
+          <p className='error-load-message'>
+            An Error occured while loading the games
+          </p>
         )}
+        {data && data.map((game) => <GameCard key={game.id} {...game} />)}
       </section>
     </div>
   )

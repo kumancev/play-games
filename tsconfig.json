@@ -30,6 +30,7 @@
       "@api/*": ["./src/api/*"],
       "@src/types/*": ["./src/types/*"],
       "@features/*": ["./src/features/*"],
+      "@services/*": ["./src/services/*"],
       "@helpers/*": ["./src/helpers/*"],
       "@utils/*": ["./src/utils/*"]
     }

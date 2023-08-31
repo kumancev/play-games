@@ -42,3 +42,9 @@ export type GameFull = {
   minimum_system_requirements: MinimumSystemRequirements
   screenshots: Array<Screenshot>
 }
+
+export type SortGamesProps = {
+  platform: string
+  genre: string
+  sort: string
+}
