@@ -1,4 +1,15 @@
-.game-list-wrapper {
+.game-list {
+  margin: 0 2em;
+}
+
+.game-list__title {
+  padding-top: 1em;
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.game-list__wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;

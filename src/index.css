@@ -34,10 +34,6 @@ a {
   content: url('./assets/logo.png');
 }
 
-.text-title {
-  font-size: 1.5rem;
-}
-
 .text-blue {
   color: #49acff !important;
 }
