@@ -13,16 +13,19 @@ export const gamesApi = createApi({
   endpoints: (builder) => ({
     getAllGames: builder.query<Array<GameItem>, string>({
       query: () => `games`,
+      extraOptions: { maxRetries: 3 },
     }),
     getGameById: builder.query<GameFull, string>({
       query: (gameId) => `game?id=${gameId}`,
       keepUnusedDataFor: 5 * 60 * 1000,
+      extraOptions: { maxRetries: 3 },
     }),
     getSortGames: builder.query<Array<GameItem>, SortGamesProps>({
       query: ({ platform, genre, sort }) =>
         `games?platform=${platform || 'all'}&category=${
           genre || 'shooter'
         }&sort-by=${sort || 'release-date'}`,
+      extraOptions: { maxRetries: 3 },
     }),
   }),
 })
